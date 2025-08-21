@@ -1,0 +1,22 @@
+# Binaries
+KernelRuler
+test1
+*.exe
+*.out
+
+# Object files (BPF)
+*.o
+
+# Build artifacts
+*.a
+
+# Logs
+*.log
+
+# IDE / Editor files
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
