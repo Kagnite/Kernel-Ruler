@@ -3,6 +3,12 @@
 A modern terminal-based **process monitoring tool** built with **Go**, **eBPF**, and the [Bubble Tea](https://github.com/charmbracelet/bubbletea) TUI framework.  
 It’s like `htop`, but focuses on **real-time process execution tracking** since the moment you launch it.
 
+## 🎥 Demo
+
+Here’s how Kernel-Ruler looks in action:
+
+![Demo](docs/demo.gif)
+
 ---
 
 ## ✨ Features
