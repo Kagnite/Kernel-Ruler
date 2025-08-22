@@ -7,7 +7,7 @@ It’s like `htop`, but focuses on **real-time process execution tracking** sinc
 
 Here’s how Kernel-Ruler looks in action:
 
-![Demo](docs/demo.gif)
+![KernelRuler Demo](docs/demo.gif)
 
 ---
 
