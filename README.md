@@ -29,7 +29,45 @@ cd Kernel-Ruler
 go build -o kernelruler main.go
 sudo ./kernelruler
 ```
-## ⌨️ Usage
+## 🐳 Installation & Run with Docker
+
+```
+git clone https://github.com/Kagnite/Kernel-Ruler.git
+cd Kernel-Ruler
+
+# Build Docker image (make sure you spelled kernelruler correctly!)
+docker build -t kernelruler:test .
+
+# Mount bpffs if not already mounted
+sudo mount -t bpf bpf /sys/fs/bpf || true
+
+# Run the container
+docker run --rm -it \
+  --privileged \
+  --pid=host \
+  -v /sys/fs/bpf:/sys/fs/bpf \
+  -v /sys/kernel/debug:/sys/kernel/debug \
+  kernelruler:test
+```
+## Run in background
+
+```
+docker run -d -it --name kernelruler \
+  --privileged --pid=host \
+  -v /sys/fs/bpf:/sys/fs/bpf \
+  -v /sys/kernel/debug:/sys/kernel/debug \
+  kernelruler:test
+```
+## Attach later:
+```
+docker attach kernelruler
+# Detach without killing: Ctrl+P then Ctrl+Q
+```
+## Restart:
+```
+docker start -ai kernelruler
+```
+## ⌨ Usage:
 ```
   ↑/↓   Navigate process list
   /     Search & filter
@@ -38,9 +76,6 @@ sudo ./kernelruler
   k     Kill selected process
   q     Quit
 ```
-## ⚙️ Prerequisites
-- Go 1.21+  
-- Linux with eBPF support  
-- Kernel headers installed (example on Debian/Ubuntu):  
-  ```bash
+## ⚙ Prerequisites - Go 1.21+ - Linux with eBPF support - Kernel headers installed (example on Debian/Ubuntu):
+bash
   sudo apt install linux-headers-$(uname -r)
