@@ -29,12 +29,13 @@ cd Kernel-Ruler
 go build -o kernelruler main.go
 sudo ./kernelruler
 ```
-## Keys
+## ⌨️ Usage
+```
   ↑/↓   Navigate process list
   /     Search & filter
   t     Toggle tree view
   enter Show process details
   k     Kill selected process
   q     Quit
-
+```
 ### Prerequisites - Go 1.21+ - Linux with eBPF support - Kernel headers installed (for building BPF program)
