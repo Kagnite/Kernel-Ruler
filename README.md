@@ -38,4 +38,9 @@ sudo ./kernelruler
   k     Kill selected process
   q     Quit
 ```
-### Prerequisites - Go 1.21+ - Linux with eBPF support - Kernel headers installed (for building BPF program)
+## ⚙️ Prerequisites
+- Go 1.21+  
+- Linux with eBPF support  
+- Kernel headers installed (example on Debian/Ubuntu):  
+  ```bash
+  sudo apt install linux-headers-$(uname -r)
