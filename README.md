@@ -6,7 +6,7 @@ Think of it like `htop` + `pstree`, but focused on **real-time process execution
 ---
 
 ## 🎥 Demo
-![KernelRuler Demo](docs/demo.gif)
+![KernelRuler Demo](docs/demo.webp)
 
 ---
 
