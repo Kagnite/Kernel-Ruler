@@ -28,7 +28,7 @@ git clone https://github.com/Kagnite/Kernel-Ruler.git
 cd Kernel-Ruler
 go build -o kernelruler main.go
 sudo ./kernelruler
-
+```
 ## Keys
   ↑/↓   Navigate process list
   /     Search & filter
