@@ -77,5 +77,6 @@ docker start -ai kernelruler
   q     Quit
 ```
 ## ⚙ Prerequisites - Go 1.21+ - Linux with eBPF support - Kernel headers installed (example on Debian/Ubuntu):
-bash
+```
   sudo apt install linux-headers-$(uname -r)
+```
